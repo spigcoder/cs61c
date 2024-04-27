@@ -1,3 +1,13 @@
-hello
-int_hello
-test_ll_cycle
+*
+!.gitignore
+!ex1_hello.c
+!ex2_pointer_basics.c
+!ex3_pointers_and_functions.c
+!ex4_arrays.c
+!ex4_arrays_updated.c
+!ex5_pointer_arithmetic.c
+!ex5_pointer_arithmetic_updated.c
+!ex6_strings.c
+!ex7_strcpy.c
+!ex7_strcpy_fixed.c
+!ex8_structs.c

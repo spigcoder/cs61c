@@ -1,9 +1,0 @@
-1.type set args first_arg second_arg third_arg before run
-2.b + line number
-3.type n
-4.type s
-5.if you want go to next breakpoint you should type c else n or s
-6.print + value name 
-7.display + value name
-8.use info locals to see all the value of function 
-9.type q and y
