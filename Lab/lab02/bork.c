@@ -7,10 +7,7 @@
 #include <string.h>
 
 char *alloc_str(int len) {
-    //return malloc(len*sizeof(char));
-	char *data = (char*)malloc((len+1)*sizeof(char));
-	data[len] = '\0';
-	return data;
+    return malloc(len*sizeof(char));
 }
 
 /* Str helper functions */
@@ -48,11 +45,9 @@ Str concat(Str a, Str b) {
 Str translate_to_bork(char c) {
     switch(c) {
     case 'a': case 'e': case 'i': case 'o': case 'u': {
-        char *res = alloc_str(3);
+        char *res = alloc_str(2);
         res[0] = c;
         res[1] = 'f';
-		//"这里传递res是strlen要对res进行计算长度，但是由于再制造是并没有给res以\0进行结尾
-		//所以会导致越界访问的情况"
         return make_Str(res);
     }
     }
@@ -77,6 +72,5 @@ int main(int argc, char*argv[]) {
     printf("Input string: \"%s\"\n", src_str.data);
     printf("Length of translated string: %d\n", dest_str.len);
     printf("Translate to Bork: \"%s\"\n", dest_str.data);
-	free_Str(dest_str);
     return 0;
 }

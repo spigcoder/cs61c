@@ -27,7 +27,16 @@ main:
 # The return value should be stored in a0
 factorial:
     # YOUR CODE HERE
-
+    addi t0, x0, 1
+    addi t1, a0, 1
+    addi t2, x0, 2
+    bge t2, t1, exit
+loop:
+    mul t0, t0, t2
+    addi t2, t2, 1
+    blt t2, t1, loop	
     # This is how you return from a function. You'll learn more about this later.
     # This should be the last line in your program.
+exit:
+	addi a0, t0, 0
     jr ra
